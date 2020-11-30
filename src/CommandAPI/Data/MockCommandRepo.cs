@@ -3,7 +3,7 @@ using CommandAPI.Models;
 
 namespace CommandAPI.Data
 {
-    public class MockCommandAPIRepo : ICommandAPIRepo
+    public class MockCommandsRepo : ICommandsRepo
     {
         public void DeleteCommand(Command cmd)
         {
