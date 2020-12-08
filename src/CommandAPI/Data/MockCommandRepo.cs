@@ -5,49 +5,49 @@ namespace CommandAPI.Data
 {
     public class MockCommandsRepo : ICommandsRepo
     {
-        public void DeleteCommand(Command cmd)
+        public void DeleteCommand(CommandItem cmd)
         {
             throw new System.NotImplementedException();
         }
 
-        public IEnumerable<Command> GetAllCommands()
+        public IEnumerable<CommandItem> GetAllCommands()
         {
-            var commands = new List<Command>{
-                new Command{
-                    HowTo="ls -lh",
+            var commands = new List<CommandItem>{
+                new CommandItem{
+                    Command="ls -lh",
                     Id=0,
                     Platform="Unix command line",
-                    Title="list long format with readable file size"
+                    HowTo="list long format with readable file size"
                 },
-                new Command{
-                    HowTo="ls -a",
+                new CommandItem{
+                    Command="ls -a",
                     Id=1,
                     Platform="Unix command line",
-                    Title="list all files including hidden file starting with '.'"
+                    HowTo="list all files including hidden file starting with '.'"
                 },
-                new Command{
-                    HowTo="ls --color",
+                new CommandItem{
+                    Command="ls --color",
                     Id=2,
                     Platform="Unix command line",
-                    Title="colored list [=always/never/auto]"
+                    HowTo="colored list [=always/never/auto]"
                 }
             };
 
             return commands;
         }
 
-        public Command GetCommandById(int id)
+        public CommandItem GetCommandById(int id)
         {
-            return new Command
+            return new CommandItem
             {
-                HowTo = "ls -a",
+                Command = "ls -a",
                 Id = 1,
                 Platform = "Unix command line",
-                Title = "list all files including hidden file starting with '.'"
+                HowTo = "list all files including hidden file starting with '.'"
             };
         }
 
-        public void UpdateCommand(Command cmd)
+        public void UpdateCommand(CommandItem cmd)
         {
             throw new System.NotImplementedException();
         }

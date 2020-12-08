@@ -2,16 +2,16 @@ using System.ComponentModel.DataAnnotations;
 
 namespace CommandAPI.Models
 {
-    public class Command
+    public class CommandItem
     {
         [Key]
         [Required]
         public int Id { get; set; }
         [Required]
-        public string HowTo { get; set; }
+        public string Command { get; set; }
         [Required]
         [MaxLength(50)]
-        public string Title { get; set; }
+        public string HowTo { get; set; }
         [Required]
         public string Platform { get; set; }
     }
